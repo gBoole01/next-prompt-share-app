@@ -23,7 +23,7 @@ const MyProfile = () => {
   }, []);
 
   const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
+    router.push(`/modifier-prompt?id=${post._id}`);
   };
 
   const handleDelete = async (post) => {
@@ -44,11 +44,13 @@ const MyProfile = () => {
     }
   };
 
+  if (!session?.user) return router.push("/");
+
   return (
     <section>
       <Profile
-        name="My"
-        desc="Welcome to your personal profile page."
+        name="Mon"
+        desc="Bienvue sur votre profil, vous pouvez voir vos prompts ici"
         data={posts}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
