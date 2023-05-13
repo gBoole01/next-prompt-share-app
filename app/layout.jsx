@@ -3,18 +3,19 @@ import Provider from "@components/Provider";
 import "@styles/globals.css";
 
 export const metadata = {
-  title: "Prompt Share App",
+  title: "Promptshare",
   description:
-    "Prompt Share App is a web app that allows you to share prompts with your friends.",
+    "Enregistrez et partagez vos meilleurs prompts d'IA grâce à Promptshare !",
 };
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="fr">
+      <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
       <body>
         <Provider>
           <div className="main">
-            <div className="gradient" />
+            <div />
           </div>
 
           <main className="app">

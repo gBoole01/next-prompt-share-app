@@ -37,9 +37,11 @@ const CreatePrompt = () => {
     }
   };
 
+  if (!session?.user) return router.push("/");
+
   return (
     <Form
-      type="Create"
+      type="Créer"
       post={post}
       setPost={setPost}
       submitting={submitting}

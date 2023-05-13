@@ -57,9 +57,11 @@ const UpdatePrompt = () => {
     }
   };
 
+  if (!session?.user) return router.push("/");
+
   return (
     <Form
-      type="Update"
+      type="Modifier"
       post={post}
       setPost={setPost}
       submitting={submitting}

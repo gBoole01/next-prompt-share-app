@@ -22,29 +22,29 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
-          alt="Promptopia Logo"
+          src="/assets/images/favicon.svg"
+          alt="Prompt share Logo"
           width={30}
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">Prompt Share</p>
+        <p className="logo_text">Promptshare</p>
       </Link>
 
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
-              Create Post
+              Créer un prompt
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
-              Sign Out
+              Se déconnecter
             </button>
 
-            <Link href="/profile">
+            <Link href="/profil">
               <Image
                 src={session?.user?.image}
-                alt="Profile"
+                alt="Image de profil"
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -61,7 +61,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign In
+                  Se connecter
                 </button>
               ))}
           </>
@@ -73,7 +73,7 @@ const Nav = () => {
           <div className="flex">
             <Image
               src={session?.user?.image}
-              alt="Profile"
+              alt="Image de profil"
               width={37}
               height={37}
               className="rounded-full"
@@ -83,18 +83,18 @@ const Nav = () => {
             {toggleDropdown && (
               <div className="dropdown">
                 <Link
-                  href="/profile"
+                  href="/profil"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  My Profile
+                  Mon Profil
                 </Link>
                 <Link
-                  href="/create-prompt"
+                  href="/creer-prompt"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  Créer un Prompt
                 </Link>
                 <button
                   type="button"
@@ -102,9 +102,9 @@ const Nav = () => {
                     setToggleDropdown(false);
                     signOut();
                   }}
-                  className="mt-5 w-full black_btn"
+                  className="mt-3 w-full black_btn"
                 >
-                  Sign Out
+                  Se déconnecter
                 </button>
               </div>
             )}
@@ -119,7 +119,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign In
+                  Se connecter
                 </button>
               ))}
           </>
